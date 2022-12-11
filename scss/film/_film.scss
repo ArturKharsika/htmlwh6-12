@@ -1,0 +1,12 @@
+@mixin flex($jc: center, $fd:column) {
+	display: flex;
+	flex-direction: $fd;
+}
+
+.film {
+	@include flex();
+	width: 1300px;
+	height: 700px;
+	background: url(../img/main-bg.jpg);
+	background-size: cover;
+}

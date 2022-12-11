@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	text-decoration: none;
+}

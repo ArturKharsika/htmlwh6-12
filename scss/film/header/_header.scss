@@ -1,0 +1,59 @@
+@mixin flex($ai:center) {
+    display: flex;
+    align-items: $ai
+}
+
+.header {
+    @include flex();
+    padding: $headerPadding;
+    background-color: $headerBgColor;
+    ul {
+        @include flex();
+        margin-left: $menuMarginLeft;
+    }
+    .menu-item {
+        @include flex();
+        padding-right: $menuItemsPadding;
+    }
+    .logo img {
+        width: 100px;
+    }
+    a {
+        color: $menuTextColor;
+        font-weight: $fontWeight;
+        text-transform: $filmTextTransformUppercase;
+    }
+
+    .tariffs {
+        border: $filmBorder;
+        border-radius: 10%;
+        padding: $tariffsPadding;
+        margin-right: $userSettingsMargin;
+    }
+    .dots {
+        margin: 0 130px 0 15px;
+    }
+    .more-menu {
+        width: 25px;
+        height: 25px;
+        cursor: $filmCursor;
+    }
+    .search {
+        @include flex(center);
+        margin-right: $userSettingsMargin;
+    }
+    .user-settings {
+        color: $menuTextColor;
+        font-weight: $fontWeight;
+	    text-transform: $filmTextTransformUppercase;
+        margin-right: $userSettingsMargin;
+        cursor: $filmCursor;
+    }
+    .language {
+        color: gray;
+        font-size: $filmFontSize;
+    }
+    .login {
+        font-size: $filmFontSize;
+    }
+}

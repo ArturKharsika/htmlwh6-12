@@ -1,0 +1,19 @@
+@mixin flex($jc: flex-end, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+}
+
+.sound-control {
+    @include flex();
+    margin: 20px;  
+    cursor: $filmCursor;
+    .sound-icon {
+        @include flex();
+        width: 60px;
+        height: 60px;
+        border: $filmBorder;
+        border-radius: 50%;
+        background: rgba(0,0,0,.5);
+        align-items: center;
+    }
+}

@@ -1,0 +1,89 @@
+@mixin flex() {
+    display: flex;
+}
+
+.film-content {
+    @include flex();
+    height: 290px;
+    margin-top: auto;
+	padding: 40px;
+	background-image: $filmContentBackground;
+    .fall-logotype {
+        width: 150px;
+    }
+    .film-info {
+        padding: 40px;
+        color: $menuTextColor;
+        text-transform: $filmTextTransformUppercase;
+    }
+    .upper-info {
+        font-size: $filmFontSize;
+        margin-right: 20px;
+        font-weight: $fontWeight;
+    }
+    .discount {
+        background: red;
+        border-radius: 10%;
+        padding: 3px 6px;
+    }
+    .subscription {
+        color: darkorange;
+    }
+    .film-name {
+        text-transform: $filmTextTransformCapitalize;
+        margin-top: 20px;
+    }
+    .watch {
+        background: OrangeRed;
+	    padding: 15px 30px;
+	    border-radius: 5%;
+	    width: 50px;
+	    height: 50px;
+	    text-transform: $filmTextTransformCapitalize;
+	    margin-right: $filmContentMargin;
+        cursor: $filmCursor;
+    }
+    .player {
+        width: 15px;
+        margin-right: 10px;
+    }
+    .favorite {
+        border: 2px solid rgba(255, 255, 255, .4);
+        padding: 15px 30px;
+        border-radius: 5%;
+        align-items: center;
+        margin-right: 40px;
+        cursor: $filmCursor;
+    }
+    .add-to-favorite {
+        width: 22px;
+        margin-bottom: -4px;
+    }
+    .vote img {
+        width: 50px;
+        margin-right: 30px;
+        margin-bottom: -8px;
+        cursor: $filmCursor;
+    }
+    .dislike img {
+        margin-bottom: -15px;
+    }
+    .description {
+        margin: 5px;
+        font-size: 13px;
+        text-transform: none;
+        color: silver;
+    }
+    
+    .try {
+        margin-right: 55px;
+    }
+    
+    .add {
+        margin-right: $filmContentMargin;
+    }
+    
+    .value-likes {
+        margin-right: $filmContentMargin;
+    }
+}
