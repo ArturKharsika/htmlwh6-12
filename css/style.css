@@ -49,7 +49,16 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 15px;
+}
+.header .menu-item__view-type {
+  margin-right: 60px;
+}
+.header .menu-item .series {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .header .logo img {
   width: 100px;
@@ -59,21 +68,31 @@ a {
   font-weight: bold;
   text-transform: uppercase;
 }
-.header .tariffs {
-  border: 1px solid white;
-  border-radius: 10%;
-  padding: 5px 15px;
-  margin-right: 15px;
-}
-.header .dots {
-  margin: 0 130px 0 15px;
-}
 .header .more-menu {
   width: 25px;
   height: 25px;
   cursor: pointer;
 }
-.header .search {
+.header .user-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.header .user-settings__tariffs {
+  border: 1px solid white;
+  border-radius: 10%;
+  padding: 5px 15px;
+  margin: 0 15px 0 600px;
+}
+.header .user-settings__search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,19 +101,14 @@ a {
           align-items: center;
   margin-right: 15px;
 }
-.header .user-settings {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-right: 15px;
-  cursor: pointer;
-}
-.header .language {
+.header .user-settings__language {
   color: gray;
   font-size: 15px;
+  margin-right: 15px;
 }
-.header .login {
+.header .user-settings .login {
   font-size: 15px;
+  margin-right: 0;
 }
 
 .sound-control {
@@ -128,6 +142,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 290px;
   margin-top: auto;
   padding: 40px;
@@ -220,8 +240,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 1300px;
-  height: 700px;
+  width: 1920px;
+  height: 937px;
   background: url(../img/main-bg.jpg);
   background-size: cover;
 }/*# sourceMappingURL=style.css.map */

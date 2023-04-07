@@ -13,7 +13,13 @@
     }
     .menu-item {
         @include flex();
-        padding-right: $menuItemsPadding;
+        &__view-type {
+            margin-right: $menuItemsPadding;
+        }
+        .series {
+            display: flex;
+            flex-wrap: nowrap;
+        }
     }
     .logo img {
         width: 100px;
@@ -23,37 +29,36 @@
         font-weight: $fontWeight;
         text-transform: $filmTextTransformUppercase;
     }
-
-    .tariffs {
-        border: $filmBorder;
-        border-radius: 10%;
-        padding: $tariffsPadding;
-        margin-right: $userSettingsMargin;
-    }
-    .dots {
-        margin: 0 130px 0 15px;
-    }
     .more-menu {
         width: 25px;
         height: 25px;
         cursor: $filmCursor;
     }
-    .search {
-        @include flex(center);
-        margin-right: $userSettingsMargin;
-    }
     .user-settings {
+        @include flex();
         color: $menuTextColor;
         font-weight: $fontWeight;
 	    text-transform: $filmTextTransformUppercase;
         margin-right: $userSettingsMargin;
         cursor: $filmCursor;
-    }
-    .language {
+        &__tariffs {
+            border: $filmBorder;
+            border-radius: 10%;
+            padding: $tariffsPadding;
+            margin: 0 15px 0 600px;
+        }
+        &__search {
+            @include flex(center);
+            margin-right: $userSettingsMargin;
+        }
+        &__language {
         color: gray;
         font-size: $filmFontSize;
-    }
-    .login {
+        margin-right: $userSettingsMargin;
+        }
+        .login {
         font-size: $filmFontSize;
+        margin-right: 0;
+        }
     }
 }
