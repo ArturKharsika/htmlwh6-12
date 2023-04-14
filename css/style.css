@@ -32,6 +32,7 @@ a {
           align-items: center;
   padding: 15px 20px;
   background-color: black;
+  height: 45px;
 }
 .header ul {
   display: -webkit-box;
@@ -51,22 +52,43 @@ a {
           align-items: center;
 }
 .header .menu-item__view-type {
-  margin-right: 60px;
+  margin-right: 15px;
+  white-space: nowrap;
+  font-size: 15px;
 }
-.header .menu-item .series {
+.header .menu-item__view-type a:hover {
+  color: orangered;
+}
+.header .menu-item__dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  width: 55px;
+}
+.header .menu-item__dots:hover {
+  background: white;
+  background-size: contain;
 }
 .header .logo img {
   width: 100px;
 }
 .header a {
   color: white;
+}
+.header li {
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
+}
+.header li:hover {
+  color: orangered;
 }
 .header .more-menu {
   width: 25px;
@@ -81,8 +103,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-weight: bold;
-  text-transform: uppercase;
   margin-right: 15px;
   cursor: pointer;
 }
@@ -90,7 +110,20 @@ a {
   border: 1px solid white;
   border-radius: 10%;
   padding: 5px 15px;
-  margin: 0 15px 0 600px;
+  margin: 0 15px 0 120px;
+  text-transform: capitalize;
+}
+.header .user-settings__tariffs:hover {
+  border-color: orangered;
+}
+.header .user-settings__tariffs a:hover {
+  color: orangered;
+}
+.header .user-settings__sign-in {
+  margin-right: 0;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 .header .user-settings__search {
   display: -webkit-box;
@@ -103,14 +136,48 @@ a {
 }
 .header .user-settings__language {
   color: gray;
-  font-size: 15px;
   margin-right: 15px;
+  cursor: pointer;
 }
-.header .user-settings .login {
-  font-size: 15px;
-  margin-right: 0;
+.header .user-settings__language:hover {
+  color: white;
 }
 
+@media (max-width: 1100px) {
+  .header ul {
+    margin-left: 20px;
+  }
+  .header .menu-item__view-type {
+    margin-right: 10px;
+  }
+  .header .series {
+    white-space: nowrap;
+  }
+  .header .user-settings__search {
+    margin-right: 10px;
+  }
+  .header .user-settings__tariffs {
+    margin: 0 10px 0 30px;
+  }
+  .header .user-settings__language {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1020px) {
+  .header {
+    height: 40px;
+    padding: 10px 15px;
+  }
+  .header .menu-item__view-type {
+    font-size: 14px;
+  }
+  .header .user-settings__search {
+    margin-right: 10px;
+  }
+  .header .user-settings__tariffs {
+    margin: 0 10px 0 25px;
+  }
+}
 .sound-control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,6 +233,7 @@ a {
   font-size: 15px;
   margin-right: 20px;
   font-weight: bold;
+  cursor: default;
 }
 .film-content .discount {
   background: red;
@@ -178,9 +246,10 @@ a {
 .film-content .film-name {
   text-transform: capitalize;
   margin-top: 20px;
+  cursor: default;
 }
 .film-content .watch {
-  background: OrangeRed;
+  background: #f60;
   padding: 15px 30px;
   border-radius: 5%;
   width: 50px;
@@ -188,6 +257,9 @@ a {
   text-transform: capitalize;
   margin-right: 40px;
   cursor: pointer;
+}
+.film-content .watch:hover {
+  background: orangered;
 }
 .film-content .player {
   width: 15px;
@@ -200,27 +272,43 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 40px;
+  margin-right: 30px;
   cursor: pointer;
 }
 .film-content .add-to-favorite {
   width: 22px;
   margin-bottom: -4px;
 }
-.film-content .vote img {
-  width: 50px;
-  margin-right: 30px;
-  margin-bottom: -8px;
+.film-content .favorite:hover {
+  background: orangered;
+  opacity: 0.7;
+}
+.film-content .vote__dislike {
+  margin-bottom: -25px;
+  width: 70px;
+  margin-right: 40px;
   cursor: pointer;
 }
-.film-content .dislike img {
-  margin-bottom: -15px;
+.film-content .vote__dislike:hover {
+  background: red;
+  opacity: 0.5;
+}
+.film-content .vote__like {
+  width: 70px;
+  margin-right: 20px;
+  margin-bottom: -25px;
+  cursor: pointer;
+}
+.film-content .vote__like:hover {
+  background: green;
+  opacity: 0.5;
 }
 .film-content .description {
   margin: 5px;
   font-size: 13px;
   text-transform: none;
   color: silver;
+  cursor: default;
 }
 .film-content .try {
   margin-right: 55px;
@@ -231,6 +319,12 @@ a {
 .film-content .value-likes {
   margin-right: 40px;
 }
+.film-content .value-likes:hover {
+  color: green;
+}
+.film-content .value-dislikes:hover {
+  color: firebrick;
+}
 
 .film {
   display: -webkit-box;
@@ -240,8 +334,21 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 1920px;
-  height: 937px;
+  width: 1200px;
+  height: 700px;
   background: url(../img/main-bg.jpg);
   background-size: cover;
+}
+
+@media (max-width: 1100px) {
+  .film {
+    width: 1055px;
+    height: 700px;
+  }
+}
+@media (max-width: 1020px) {
+  .film {
+    width: 975px;
+    height: 700px;
+  }
 }/*# sourceMappingURL=style.css.map */

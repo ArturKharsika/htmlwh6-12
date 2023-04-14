@@ -5,29 +5,48 @@
 
 .header {
     @include flex();
-    padding: $headerPadding;
-    background-color: $headerBgColor;
+    padding: 15px 20px;
+    background-color: black;
+    height: 45px;
     ul {
         @include flex();
-        margin-left: $menuMarginLeft;
+        margin-left: 30px;
     }
     .menu-item {
         @include flex();
         &__view-type {
-            margin-right: $menuItemsPadding;
+            margin-right: 15px;
+            white-space: nowrap;
+            font-size: $mainFSize;
         }
-        .series {
+        &__view-type a:hover {
+            color: orangered;
+        }
+        &__dots {
             display: flex;
-            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            width: 55px;
+        }
+        &__dots:hover {
+            background: white;
+            background-size: contain;
         }
     }
     .logo img {
         width: 100px;
     }
     a {
-        color: $menuTextColor;
-        font-weight: $fontWeight;
-        text-transform: $filmTextTransformUppercase;
+        color: $mainColor;
+    }
+    li {
+        color: $mainColor;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    li:hover {
+        color: orangered;
     }
     .more-menu {
         width: 25px;
@@ -36,29 +55,87 @@
     }
     .user-settings {
         @include flex();
-        color: $menuTextColor;
-        font-weight: $fontWeight;
-	    text-transform: $filmTextTransformUppercase;
-        margin-right: $userSettingsMargin;
+        color: $mainColor;
+        margin-right: $headMargin;
         cursor: $filmCursor;
         &__tariffs {
-            border: $filmBorder;
+            border: 1px solid $mainColor;
             border-radius: 10%;
-            padding: $tariffsPadding;
-            margin: 0 15px 0 600px;
+            padding: 5px 15px;
+            margin: 0 15px 0 120px;
+            text-transform: capitalize;
+        }
+        &__tariffs:hover {
+            border-color: orangered;
+        }
+        &__tariffs a:hover {
+            color: orangered;
+        }
+        &__sign-in {
+            margin-right: 0;
+            color: $mainColor;
+            text-transform: uppercase;
+            cursor: $filmCursor;
         }
         &__search {
             @include flex(center);
-            margin-right: $userSettingsMargin;
+            margin-right: $headMargin;
         }
         &__language {
-        color: gray;
-        font-size: $filmFontSize;
-        margin-right: $userSettingsMargin;
+            color: gray;
+            margin-right: $headMargin;
+            cursor: $filmCursor;
         }
-        .login {
-        font-size: $filmFontSize;
-        margin-right: 0;
+        &__language:hover {
+            color: white;
+        } 
+    }
+}
+
+@media (max-width: 1100px) {
+    .header {
+        ul {
+            margin-left: 20px;
+        }
+        .menu-item {
+            &__view-type {
+                margin-right: 10px;
+            }
+        }
+        .series {
+            white-space: nowrap;
+        }
+        .user-settings {
+            &__search {
+                margin-right: 10px;
+            }
+            &__tariffs {
+                margin: 0 10px 0 30px;
+            }
+            &__language {
+                margin-right: 10px;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1020px) {
+    .header {
+        height: 40px;
+        padding: 10px 15px;
+        .menu-item {
+            &__view-type {
+                font-size: 14px;
+            }
+        }
+        .user-settings {
+            &__search {
+                margin-right: 10px;
+            }
+            &__tariffs {
+                margin: 0 10px 0 25px;
+            }
         }
     }
 }

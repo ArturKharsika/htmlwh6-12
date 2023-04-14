@@ -5,8 +5,22 @@
 
 .film {
 	@include flex();
-	width: 1920px;
-	height: 937px;
+	width: 1200px;
+	height: 700px;
 	background: url(../img/main-bg.jpg);
 	background-size: cover;
+}
+
+@media (max-width: 1100px) {
+    .film {
+       width: 1055px;
+	   height: 700px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .film {
+       width: 975px;
+	   height: 700px;
+    }
 }
